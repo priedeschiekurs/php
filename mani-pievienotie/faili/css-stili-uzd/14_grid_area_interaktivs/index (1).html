@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area interaktīvs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="demo">
+        <h1>Grid Area demonstrācija</h1>
+        <p>Izvēlies izkārtojumu un vēro, kā tie paši HTML elementi pārvietojas ar grid-template-areas.</p>
+
+        <fieldset class="controls">
+            <legend>Izkārtojums</legend>
+            <label><input type="radio" name="layout" value="classic" checked> Klasiskais</label>
+            <label><input type="radio" name="layout" value="right"> Sidebar pa labi</label>
+            <label><input type="radio" name="layout" value="top"> Sidebar augšā</label>
+            <label><input type="radio" name="layout" value="wide"> Content pilnā platumā</label>
+        </fieldset>
+
+        <section class="grid-layout">
+            <header class="header">HEADER</header>
+            <nav class="sidebar">SIDEBAR</nav>
+            <article class="content">CONTENT</article>
+            <aside class="extra">EXTRA</aside>
+            <footer class="footer">FOOTER</footer>
+        </section>
+    </main>
+</body>
+</html>

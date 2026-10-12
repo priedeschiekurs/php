@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.demo {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.controls {
+    margin: 24px 0;
+    padding: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: white;
+}
+
+.controls label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 6px 16px 6px 0;
+    cursor: pointer;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 180px;
+    grid-template-rows: 90px 300px 90px;
+    grid-template-areas:
+        "header header header"
+        "sidebar content extra"
+        "footer footer footer";
+    gap: 14px;
+}
+
+.grid-layout > * {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.header {
+    grid-area: header;
+    background: #4361ee;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #7b2cbf;
+}
+
+.content {
+    grid-area: content;
+    background: #0a9396;
+}
+
+.extra {
+    grid-area: extra;
+    background: #f77f00;
+}
+
+.footer {
+    grid-area: footer;
+    background: #ef476f;
+}
+
+.demo:has(input[value="classic"]:checked) .grid-layout {
+    grid-template-columns: 220px 1fr 180px;
+    grid-template-rows: 90px 300px 90px;
+    grid-template-areas:
+        "sidebar sidebar header"
+        "sidebar sidebar extra"
+        "sidebar sidebar footer";
+}
+
+.demo:has(input[value="right"]:checked) .grid-layout {
+    grid-template-columns: 1fr 180px 220px;
+    grid-template-rows: 90px 300px 90px;
+    grid-template-areas:
+        "header header header"
+        "content extra sidebar"
+        "footer footer footer";
+}
+
+.demo:has(input[value="top"]:checked) .grid-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 80px 260px 90px;
+    grid-template-areas:
+        "header header"
+        "sidebar sidebar"
+        "content extra"
+        "footer footer";
+}
+
+.demo:has(input[value="wide"]:checked) .grid-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 140px 220px 90px;
+    grid-template-areas:
+        "header header"
+        "sidebar extra"
+        "content content"
+        "footer footer";
+}
+
+@media (max-width: 700px) {
+    .grid-layout,
+    .demo:has(input[value="classic"]:checked) .grid-layout,
+    .demo:has(input[value="right"]:checked) .grid-layout,
+    .demo:has(input[value="top"]:checked) .grid-layout,
+    .demo:has(input[value="wide"]:checked) .grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, minmax(80px, auto));
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "extra"
+            "footer";
+    }
+}

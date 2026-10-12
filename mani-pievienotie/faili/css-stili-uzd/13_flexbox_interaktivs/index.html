@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox interaktīvs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="demo">
+        <h1>Flexbox iestatījumu demonstrācija</h1>
+        <p>Maini iestatījumus un vēro, kā pārvietojas elementi.</p>
+
+        <section class="controls">
+            <fieldset>
+                <legend>justify-content</legend>
+                <label><input type="radio" name="justify" value="start" checked> flex-start</label>
+                <label><input type="radio" name="justify" value="center"> center</label>
+                <label><input type="radio" name="justify" value="end"> flex-end</label>
+                <label><input type="radio" name="justify" value="between"> space-between</label>
+                <label><input type="radio" name="justify" value="around"> space-around</label>
+                <label><input type="radio" name="justify" value="evenly"> space-evenly</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>align-items</legend>
+                <label><input type="radio" name="align" value="start" checked> flex-start</label>
+                <label><input type="radio" name="align" value="center"> center</label>
+                <label><input type="radio" name="align" value="end"> flex-end</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>flex-direction</legend>
+                <label><input type="radio" name="direction" value="row" checked> row</label>
+                <label><input type="radio" name="direction" value="column"> column</label>
+            </fieldset>
+        </section>
+
+        <section class="flex-container">
+            <div class="item a">A</div>
+            <div class="item b">B</div>
+            <div class="item c">C</div>
+        </section>
+    </main>
+</body>
+</html>

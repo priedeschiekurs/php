@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 1. daļa — uzdevumi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1 id="main-title">Mana CSS mācību lapa</h1>
+        <p class="subtitle">CSS 1. daļa — pamati un selektori</p>
+
+        <nav>
+            <a href="#par-css">Par CSS</a>
+            <a href="#selektori">Selektori</a>
+            <a href="#kartites">Kartītes</a>
+            <a href="#teksts">Teksts</a>
+            <a href="#izmeri">Izmēri</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="par-css" class="intro-section">
+            <h2>Par CSS</h2>
+            <p>CSS nosaka HTML elementu vizuālo noformējumu.</p>
+            <p class="important">Šī ir svarīga rindkopa, kuru jānoformē ar class selektoru.</p>
+            <a href="#">Parasta saite ārpus navigācijas</a>
+        </section>
+
+        <section id="selektori" class="selector-demo">
+            <h2>Selektoru demonstrācija</h2>
+            <p>Šī rindkopa ir tiešs section bērns.</p>
+            <p>Arī šī rindkopa ir tiešs section bērns.</p>
+
+            <div class="nested">
+                <h3>Iekļauts saturs</h3>
+                <p>Šī rindkopa NAV tiešs section bērns, jo tā atrodas div elementā.</p>
+            </div>
+        </section>
+
+        <section id="kartites" class="card-section">
+            <h2>Tehnoloģiju kartītes</h2>
+
+            <article class="card">
+                <h3>HTML</h3>
+                <p>HTML veido tīmekļa lapas struktūru.</p>
+                <span class="tag">Struktūra</span>
+            </article>
+
+            <article class="card">
+                <h3>CSS</h3>
+                <p>CSS nosaka lapas izskatu.</p>
+                <span class="tag">Dizains</span>
+            </article>
+
+            <article class="card">
+                <h3>JavaScript</h3>
+                <p>JavaScript pievieno lapai darbību un interaktivitāti.</p>
+                <span class="tag">Interaktivitāte</span>
+            </article>
+        </section>
+
+        <section class="color-demo">
+            <h2>Krāsu piemēri</h2>
+            <p class="color-name">Šim tekstam izmanto krāsas nosaukumu.</p>
+            <p class="color-hex">Šim tekstam izmanto HEX krāsu.</p>
+            <p class="color-rgb">Šim tekstam izmanto RGB krāsu.</p>
+            <p class="color-rgba">Šim elementam izmanto RGBA fonu.</p>
+        </section>
+
+        <section class="background-demo">
+            <h2>Fona demonstrācija</h2>
+            <p>Šai sadaļai izveido atšķirīgu fonu.</p>
+        </section>
+
+        <section id="teksts" class="text-demo">
+            <h2>Teksts un fonti</h2>
+            <p class="normal-text">Parasts teksts teksta īpašību izmēģināšanai.</p>
+            <p class="italic-text">Šo rindkopu vari noformēt slīprakstā.</p>
+            <p class="uppercase-text">Šim tekstam izmēģini text-transform.</p>
+            <a href="#">Saite text-decoration izmēģināšanai</a>
+        </section>
+
+        <section id="izmeri" class="size-demo">
+            <h2>CSS mērvienības un izmēri</h2>
+            <p>Izmēģini px, %, em, rem, vw un vh.</p>
+            <div class="size-box">
+                Šim blokam uzstādi width, min-height un citas 1. daļā apskatītās izmēru īpašības.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS 1. daļas praktiskais darbs</p>
+    </footer>
+
+</body>
+</html>

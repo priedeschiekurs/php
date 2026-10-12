@@ -1,0 +1,67 @@
+/* * {
+    font-size: 12px
+} */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Šis ir komentārs */
+
+p {
+    color: black; /* Teksta krāsa*/
+}
+
+.hero {
+    background-color: none;
+    background-image: linear-gradient(to right, #17365d, #4f81db);
+}
+
+.hero {
+    background-color: none;
+}
+
+/* Fonti un teksts */
+.ft {
+    /* Fontu saime */
+    font-family: 'Times New Roman', Times, serif;
+    /* Teksta izmērs  */
+    font-size: 18px;
+    /* Teksta biezums */
+    font-weight: 700;
+    /* Teksta stils(Italic) */
+    font-style: italic ;
+    /* Teksta izlīdzinājums */
+    text-align: center;
+    /* Noņemam dekoracijas. Piem. pasvītrojums */
+    text-decoration: none;
+    /* Teksta pārveide*/
+    text-transform: uppercase;
+    /* Rindu aukstums */
+    line-height: 1.6;
+    /* Rindu atstarpes */
+    letter-spacing: 2px;
+}
+
+.content {
+    border: 1px solid black;
+    width: 90%;         /* Platums */
+    height: 50%;        /* Augstums */
+    min-width: 1000px;  /* Minimalais platums, mazāks par šo neies */
+    min-height: 300px;  /* Minimalais augstums, mazāks par šo neies */
+    max-width: 30%;     /* Maksimālais platums, lielāks par šo neies */
+    max-height: 60%;    /* Maksimālais augstums, lielāks par šo neies */
+}
+

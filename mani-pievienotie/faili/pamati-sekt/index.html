@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* h1 {
+            color: darkblue;
+        }
+
+        h1 span {
+            font-size: 33px;
+        } */
+
+        .important {
+            color: red;
+            font-weight: bold;
+        }
+
+        #h2-title {
+            color: green;
+        }
+
+        h1,h2,h3 {
+            font-style: italic;
+        }
+
+        nav a {
+            font-size: 22px;
+        }
+
+        section > p {
+            color: rgb(16, 178, 103);
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <!-- CSS - Cascading Style Sheets ir stulu valoda, kas nosaka elementu izskatu un izvietojumu. -->
+    <h1>Šis ir <span>HTML</span> saturs</h1>
+    <!-- CSS Pievienošanas veidi -->
+        <div class="content">
+            <p class="ft">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti voluptas deleniti, praesentium molestias dolorum aspernatur in laboriosam culpa optio similique!</p>
+        </div>
+        <!-- Izmēru mervienības  -->
+        <div style="font-size:30px;">
+            <!-- px ir konkrekts pikseļu skaits -->
+            <p style="font-size: 16px;">PX</p>
+            <!-- Procenit no vecākelementa izmēra -->
+            <p style="font-size: 60%;">Procenti</p>
+            <!-- Saistīts ar konkrēta elementa fonta izmēru, piem h1 -->
+            <p style="font-size: 2em;">EM</p>
+            <!-- Saistīts ar <html> saknes fomnta izmēru -->
+            <p style="font-size: 1.6rem;">REM</p>
+            <!-- 1vw = 1% no pārlūkprogrammas loga platuna -->
+            <p style="font-size: 2vw;">Vw</p>
+            <!-- 1vw = 1% no pārlūkprogrammas loga augstums -->
+            <p style="font-size: 2vh;">Vh</p>
+
+        </div>
+        
+        <!-- Inline CSS -->
+        <p style="color: red; font-size: 22px;">Sarkans tekts</p>
+        <p class="text">Lorem ipsum dolor sit amet.</p>
+        <!-- Internal CSS, piemers heah tagos augšā -->
+        <!-- External CSS, atsevišķis fails. <link rel="stylesheet" href="style.css"> -->
+    <!-- CSS sintakse -->
+    <!-- 
+    selector {
+        property: value;
+        property: value;
+    }
+    
+    p {                         Šaja gadijuma seletors ir p
+        color: blue;            color īpašība(property), blue īpašības vērtība(value)
+        font-size: 16px;        : Atdala īpašību no vērtības, ; noslēdz deklerāciju
+    }                           {} Ierobežo deklerācijas bloku
+    -->
+
+    <!-- Pamata selektori -->
+        <!-- Elementa selektors p {....}, Visus <p> elementus -->
+            <!-- p {
+                    color: #333333;
+            } -->
+        <!-- Klases selektors .card {...}, visi elementi ar class="card". -->
+            <p class="important">Svarīgs tektests</p>
+                <!-- .important {
+                    color: red;
+                    font-wight: bold;
+                } -->
+        <!-- ID selektors #main-title {....} Elementu ar id="main-title". -->
+            <h2 id="h2-title">ID selektors</h2>
+                <!-- #h2-title {
+                    color: green;
+                } -->
+        <!-- Universālais * {....}, Visus lapas elementus. -->
+                <!-- * {
+                    font-size: 12px
+                } -->
+        <!-- h1,h2,h3 {....}, visi selektori ar vienu stilu -->
+            <h1>H1 Virsraksts</h1>
+            <h2>H2 Vrisraksts</h2>
+            <h3>H3 Vrisraksts</h3>
+            <h4>H4 Virsraksts</h4>
+        <!-- h1,h2,h3 {
+            font-style: italic;
+        } -->
+        <!-- Pēcnāceja nav a {...}, Visi <a> saites, kas atrodas <nav> iekšpusē. -->
+            <nav>
+                <a href="#">Nav 1</a>
+                <a href="#">Nav 2</a>
+                <a href="#">Nav 3</a>
+            </nav>
+
+            <a href="#">Arpuus nav</a>
+        <!-- Tiešais bērns section>p {...}, tikai <p>, kas ir tiešs <section> bērns. -->
+            <section class="hero">
+                <p>Tiešais 1</p>
+
+                    <div>
+                        <p>Netišais bērs</p>
+                    </div>
+                <p>Tiešais otrais</p>
+            </section>
+
+        <!-- Krasas CSS -->
+            <!-- Nosaukums red, vienkārš bet ierobežots. -->
+                <p style="color:red">Krasas nosaukums</p>
+            <!-- HEX #4f81db, bieši izmanto tīmekļa dizainā. -->
+                <p style="color: #4f81db">HEX krasa</p>
+            <!-- RGB(red, green, blue) rgb(79, 129, 189), Sarkanā, zaļā un zilā komponentes. -->
+                <p style="color: rgb(79, 100, 189)">RGB krāsa</p>
+            <!-- RGBA rgba(79, 129, 189, 0.5) RGB + caurspīdīgums -->
+                <p style="color: rgba(11, 21, 62, 0.7)">RGB krāsa + caurspīdīgums</p>
+            <!-- HSL hsl(210, 45%, 53%), tonis, piesātinājums, gaišums -->
+                <p style="color: hsl(265, 70%, 36%)">HSL Krāsa</p>
+
+        <!-- Fons - background -->
+            <!-- background-color       fona krāsa -->
+                <!-- body {
+                    background-color: aquamarine;
+                } -->
+            <!-- background-image       fona attēls -->
+            <!-- background-repeat      fona attēla atkārtojums -->
+            <!-- background-position    fona attēla novietojums -->
+            <!-- background-size        fona attēla izmērs -->
+            <!-- background             Saīsinatais pieraksts vairākām fona īpašībām. -->
+        <!-- Teksts un fonti  -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
